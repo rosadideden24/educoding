@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EduCoding - Belajar Web Dasar</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body { padding-top: 60px; }
+    footer { margin-top: 50px; text-align: center; padding: 20px; background-color: #d6fcff; }
+	
+@keyframes slideIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animated-heading {
+  animation: slideIn 1s ease-out;
+}
+
+.navbar-custom {
+    background-color: #11b3bf;
+  }
+
+  .navbar-custom .navbar-brand,
+  .navbar-custom .nav-link {
+    color: #000 !important; /* Warna teks hitam agar kontras */
+  }
+
+  .navbar-custom .nav-link:hover {
+    color: #11b3bf !important; /* Biru saat hover */
+  }
+   body {
+    background-color: #e0f7fa;
+  }
+  </style>
+</head>
+<body>
+  <!-- Navigasi -->
+  <nav class="navbar navbar-expand-lg navbar-custom fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="#">EduCoding</a>
+      <div class="collapse navbar-collapse">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#materi">Materi</a></li>
+          <li class="nav-item"><a class="nav-link" href="#video">Video</a></li>
+          <li class="nav-item"><a class="nav-link" href="#quiz">Kuis</a></li>
+          <li class="nav-item"><a class="nav-link" href="#kontak">Kontak</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container">
+    <!-- Header -->
+    <header class="text-center mb-5">
+      <h1 class="animated-heading">Selamat Datang di EduCoding</h1>
+      <p>Platform belajar HTML, CSS, dan JavaScript untuk pemula.</p>
+      <img src="banner.PNG" class="img-fluid" alt="Banner Edukasi">
+    </header>
+
+    <!-- Materi -->
+    <section id="materi">
+      <h2>Materi Belajar</h2>
+      <ul>
+        <li><a href="html.html">HTML: Struktur dasar halaman web</a></li>
+        <li><a href="css.html">CSS: Mendesain halaman dengan gaya</a></li>
+        <li><a href="javascript.html">JavaScript: Membuat halaman interaktif</a></li>
+      </ul>
+
+      <table class="table table-bordered">
+        <thead><tr><th>Materi</th><th>Deskripsi</th></tr></thead>
+        <tbody>
+          <tr><td><a href="html.html">HTML</a></td><td>Bahasa standar yang digunakan untuk membuat dan merancang halaman web</td></tr>
+          <tr><td><a href="css.html">CSS</a></td><td>Digunakan untuk memberi gaya dan layout</td></tr>
+          <tr><td><a href="javascript.html">JavaScript</a></td><td>Memberi interaktivitas pada halaman web</td></tr>
+        </tbody>
+      </table>
+
+    </section>
+
+    <!-- Video & Audio -->
+   <section id="video" class="mt-5">
+	<h2>Belajar HTML Dasar</h2>
+		<div class="ratio ratio-16x9">
+		<iframe 
+      src="https://www.youtube.com/embed/0oA1Z6UKM5M" 
+      title="Video Pembelajaran EduCoding"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen>
+		</iframe>
+		</div>
+	</section>
+	<section id="video-2" class="mt-4">
+  <h2>Belajar CSS Dasar</h2>
+  <div class="ratio ratio-16x9">
+    <iframe 
+      src="https://www.youtube.com/embed/V-DD30lGAL0" 
+      title="Video Tambahan EduCoding"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen>
+    </iframe>
+  </div>
+</section>
+<section id="video-3" class="mt-4">
+  <h2>Belajar JavaScript Dasar</h2>
+  <div class="ratio ratio-16x9">
+    <iframe 
+      src="https://www.youtube.com/embed/sNLadea-tLU" 
+      title="Video Tambahan EduCoding 3"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen>
+    </iframe>
+  </div>
+</section>
+
+    <!-- Kuis -->
+    <section id="quiz" class="mt-5">
+      <h2>Kuis</h2>
+      <p>HTML adalah singkatan dari?</p>
+      <form>
+        <input type="radio" name="quiz" value="a"> HighText Machine Language<br>
+        <input type="radio" name="quiz" value="b"> HyperText Markup Language<br>
+        <input type="radio" name="quiz" value="c"> Hyperlink and Text Markup Language<br><br>
+        <button type="button" class="btn btn-primary" onclick="cekJawaban()">Cek Jawaban</button>
+      </form>
+    </section>
+
+    <!-- Kontak -->
+    <section id="kontak" class="mt-5">
+      <h2>Hubungi Kami</h2>
+      <form>
+        <div class="mb-3">
+          <label for="nama" class="form-label">Nama</label>
+          <input type="text" class="form-control" id="nama" required>
+        </div>
+        <div class="mb-3">
+          <label for="email" class="form-label">Email</label>
+          <input type="email" class="form-control" id="email" required>
+        </div>
+        <div class="mb-3">
+          <label for="pesan" class="form-label">Pesan</label>
+          <textarea class="form-control" id="pesan" rows="3" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-success">Kirim</button>
+      </form>
+    </section>
+  </div>
+
+  <footer>
+    &copy; 2025 EduCoding. All rights reserved.
+  </footer>
+
+  <script>
+    function cekJawaban() {
+      const jawaban = document.querySelector('input[name="quiz"]:checked');
+      if (!jawaban) {
+        alert("Silakan pilih jawaban dulu.");
+        return;
+      }
+      if (jawaban.value === "b") {
+        alert("Keren! Jawaban kamu benar Sekali !");
+      } else {
+        alert("Jawaban kamu salah. Coba lagi ya.");
+      }
+    }
+  </script>
+</body>
+</html>
